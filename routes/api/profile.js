@@ -102,10 +102,23 @@ router.post(
       res.json(profile);
     } catch (err) {
       console.error(err.message);
-      res.status(500).send("Server error - profile.js");
+      res.status(500).send("Server error - POST api/profile");
     }
     res.send("hello");
   }
 );
+
+// @route  GET api/profile
+// @desc   Get all profiles
+// @access Public
+router.get("/", async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate("user", ["name", "avatar"]);
+    res.json(profiles);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error - GET api/profile");
+  }
+});
 
 module.exports = router;
