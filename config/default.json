@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://test123:test123@shiny-chainsaw-dvd3p.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mySuperSecretToken"
+  "jwtSecret": "mySuperSecretToken",
+  "githubClientId": "67de712d4998e556197b",
+  "githubSecret": "2435070a6986870bea18f320179ce866b968743d"
 }
